@@ -1,3 +1,16 @@
+// Obtén una referencia al elemento de las estrellas
+var estrellasElement = document.querySelector('.estrellas');
+
+// Genera las estrellas
+for (var i = 0; i < 50; i++) {
+  var estrella = document.createElement('span');
+  estrella.classList.add('estrella');
+  estrella.style.left = Math.random() * 100 + '%';
+  estrella.style.animationDelay = Math.random() * 5 + 's';
+  estrellasElement.appendChild(estrella);
+}
+
+
 document.getElementById("comentarios-form").addEventListener("submit", function(event) {
     event.preventDefault();
   
@@ -14,4 +27,5 @@ document.getElementById("comentarios-form").addEventListener("submit", function(
     document.getElementById("nombre-input").value = "";
     document.getElementById("comentario-input").value = "";
   });
+
   
